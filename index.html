@@ -1,0 +1,383 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Arvin Joel V | Software Engineer & Full-Stack Developer</title>
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300;400;500;600;700&family=Space+Grotesk:wght@400;500;600;700&family=Space+Mono:ital,wght@0,400;0,700;1,400;1,700&display=swap" rel="stylesheet">
+    <!-- FontAwesome for Premium Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+  </head>
+  <body>
+    <!-- 3D Canvas Background -->
+    <canvas id="webgl-canvas"></canvas>
+
+    <!-- Custom Animated Cursor -->
+    <div class="custom-cursor" id="custom-cursor"></div>
+    <div class="custom-cursor-follower" id="custom-cursor-follower"></div>
+
+    <!-- HUD Overlay (Heads-Up Display) -->
+    <header class="hud-header">
+      <div class="logo">
+        <a href="#hero" class="hover-target">
+          <span class="logo-bracket">[</span>
+          <span class="logo-text">ARVIN.JOEL.V</span>
+          <span class="logo-bracket">]</span>
+        </a>
+      </div>
+      
+      <nav class="hud-nav">
+        <ul>
+          <li><a href="#hero" class="nav-link active hover-target" data-section="01">Home</a></li>
+          <li><a href="#about" class="nav-link hover-target" data-section="02">About</a></li>
+          <li><a href="#projects" class="nav-link hover-target" data-section="03">Projects</a></li>
+          <li><a href="#experience" class="nav-link hover-target" data-section="04">Timeline</a></li>
+          <li><a href="#contact" class="nav-link hover-target" data-section="05">Contact</a></li>
+        </ul>
+      </nav>
+
+      <div class="hud-status">
+        <span class="status-pulse"></span>
+        <span class="status-text font-mono">SYS: ACTIVE</span>
+      </div>
+    </header>
+
+    <!-- Side HUD Elements -->
+    <div class="hud-sidebar-left">
+      <div class="social-dock">
+        <a href="https://github.com/ArvinJoelV" target="_blank" class="social-link hover-target" aria-label="GitHub"><i class="fa-brands fa-github"></i></a>
+        <a href="https://www.linkedin.com/in/arvin-joel-b8801627b/?skipRedirect=true" target="_blank" class="social-link hover-target" aria-label="LinkedIn"><i class="fa-brands fa-linkedin-in"></i></a>
+        <a href="https://leetcode.com/u/Arvin_Joel/" target="_blank" class="social-link hover-target" aria-label="LeetCode"><i class="fa-solid fa-code"></i></a>
+      </div>
+    </div>
+
+    <div class="hud-sidebar-right">
+      <div class="section-indicator font-mono">
+        <span id="current-section-num">01</span>
+        <span class="indicator-line"></span>
+        <span>05</span>
+      </div>
+    </div>
+
+    <!-- Main Content Container (Glassmorphism Overlays) -->
+    <main class="content-wrapper">
+      
+      <!-- HERO SECTION -->
+      <section id="hero" class="section active">
+        <div class="hero-content">
+          <div class="hero-tag font-mono glow-text-cyan">&lt; SOFTWARE ENGINEER /&gt;</div>
+          <h1 class="hero-title">
+            Arvin Joel V
+          </h1>
+          <p class="hero-subtitle">
+            Results-driven Software Engineer with strong foundations in full-stack development, data structures, and scalable system design. Proficient in building reliable real-world applications.
+          </p>
+          <div class="hero-actions">
+            <a href="#projects" class="btn btn-primary hover-target">
+              <span>View Projects</span>
+              <i class="fa-solid fa-arrow-right"></i>
+            </a>
+            <a href="#contact" class="btn btn-secondary hover-target">
+              <span>Contact Console</span>
+            </a>
+          </div>
+        </div>
+        <div class="scroll-prompt font-mono">
+          <span class="mouse-icon"><span class="mouse-wheel"></span></span>
+          <span>SCROLL TO EXPLORE</span>
+        </div>
+      </section>
+
+      <!-- ABOUT SECTION -->
+      <section id="about" class="section">
+        <div class="section-container">
+          <div class="section-header">
+            <span class="section-num font-mono">02 //</span>
+            <h2 class="section-title">Profile & Skills</h2>
+          </div>
+          
+          <div class="about-grid">
+            <div class="about-info-col">
+              <div class="about-info glass-panel">
+                <h3 class="panel-title glow-text-cyan">&lt; EXECUTIVE SUMMARY &gt;</h3>
+                <p class="about-text">
+                  Results-driven Software Engineer with strong foundations in full-stack development, data structures, and scalable system design. Proficient in Python, React, Node.js, SQL, and MongoDB, with experience in building reliable applications that solve complex real-world problems. Skilled in developing RESTful APIs, optimizing performance, and collaborating in Agile environments to deliver high-quality software solutions.
+                </p>
+                <div class="profile-stats font-mono">
+                  <div class="stat-item">
+                    <span class="stat-val glow-text-purple">250+</span>
+                    <span class="stat-lbl">CP Solved</span>
+                  </div>
+                  <div class="stat-item">
+                    <span class="stat-val glow-text-cyan">8.098</span>
+                    <span class="stat-lbl">B.Tech CGPA</span>
+                  </div>
+                  <div class="stat-item">
+                    <span class="stat-val glow-text-purple">574</span>
+                    <span class="stat-lbl">12th Grade</span>
+                  </div>
+                </div>
+              </div>
+              
+              <div class="about-info glass-panel" style="margin-top: 20px;">
+                <h3 class="panel-title glow-text-purple">&lt; CERTIFICATIONS &gt;</h3>
+                <ul class="about-text font-mono" style="list-style-type: none; font-size: 0.85rem; line-height: 1.8;">
+                  <li><i class="fa-solid fa-certificate glow-text-cyan" style="margin-right: 8px;"></i> Ethical Hacking – IIT Kharagpur</li>
+                  <li><i class="fa-solid fa-certificate glow-text-cyan" style="margin-right: 8px;"></i> Fuzzy Sets and Logics – IIT Kanpur</li>
+                  <li><i class="fa-solid fa-certificate glow-text-cyan" style="margin-right: 8px;"></i> Full-Stack Development Bootcamps</li>
+                </ul>
+              </div>
+            </div>
+            
+            <div class="skills-wrapper">
+              <div class="skills-grid">
+                <!-- Skill Card 1 -->
+                <div class="skill-card glass-panel hover-target">
+                  <div class="skill-icon"><i class="fa-solid fa-code"></i></div>
+                  <h4 class="skill-title">Languages</h4>
+                  <p class="skill-desc">Python, C++, SQL, JavaScript, HTML / CSS</p>
+                </div>
+                <!-- Skill Card 2 -->
+                <div class="skill-card glass-panel hover-target">
+                  <div class="skill-icon"><i class="fa-solid fa-cubes"></i></div>
+                  <h4 class="skill-title">Frameworks</h4>
+                  <p class="skill-desc">React.js, Node.js, React Native</p>
+                </div>
+                <!-- Skill Card 3 -->
+                <div class="skill-card glass-panel hover-target">
+                  <div class="skill-icon"><i class="fa-solid fa-toolbox"></i></div>
+                  <h4 class="skill-title">Tools & DevOps</h4>
+                  <p class="skill-desc">Git, GitHub, MongoDB, Selenium, Burpsuite, Wireshark, Docker</p>
+                </div>
+                <!-- Skill Card 4 -->
+                <div class="skill-card glass-panel hover-target">
+                  <div class="skill-icon"><i class="fa-solid fa-book-open"></i></div>
+                  <h4 class="skill-title">Course Work & Algorithmic</h4>
+                  <p class="skill-desc">DSA, Design Patterns, DBMS, Competitive Programming (LeetCode & Codeforces)</p>
+                </div>
+              </div>
+
+              <!-- Additional Competitive Programming Card -->
+              <div class="glass-panel hover-target" style="margin-top: 20px; padding: 25px;">
+                <h4 class="skill-title font-mono glow-text-cyan" style="font-size: 0.95rem; margin-bottom: 10px;">&lt; COMPETITIVE PROGRAMMING &gt;</h4>
+                <p class="skill-desc">Solved 250+ algorithmic problems across LeetCode and Codeforces with emphasis on complex data structures, graph traversals, dynamic programming, and system optimization.</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- PROJECTS SECTION -->
+      <section id="projects" class="section">
+        <div class="section-container">
+          <div class="section-header">
+            <span class="section-num font-mono">03 //</span>
+            <h2 class="section-title">Projects Console</h2>
+          </div>
+          
+          <div class="projects-grid">
+            <!-- Project Card 1 -->
+            <div class="project-card glass-panel hover-target" data-project="1">
+              <div class="project-preview">
+                <div class="project-overlay">
+                  <span class="btn-view font-mono">INSPECT CORE &lt;EXE&gt;</span>
+                </div>
+                <div class="project-icon-large"><i class="fa-solid fa-microphone"></i></div>
+              </div>
+              <div class="project-meta">
+                <span class="project-tag font-mono glow-text-cyan">REACT NATIVE / FASTAPI</span>
+                <h3 class="project-name">Cropwise: AI Farmer Assistant</h3>
+                <p class="project-desc">A multilingual AI assistant enabling real-time queries, weather forecasts, and smart farming advice via speech recognition.</p>
+              </div>
+            </div>
+
+            <!-- Project Card 2 -->
+            <div class="project-card glass-panel hover-target" data-project="2">
+              <div class="project-preview">
+                <div class="project-overlay">
+                  <span class="btn-view font-mono">INSPECT CORE &lt;EXE&gt;</span>
+                </div>
+                <div class="project-icon-large"><i class="fa-solid fa-fish"></i></div>
+              </div>
+              <div class="project-meta">
+                <span class="project-tag font-mono glow-text-purple">PYTHON / REACT / GPS</span>
+                <h3 class="project-name">Aquanexus: Fishing Tool</h3>
+                <p class="project-desc">A smart tool using environmental and marine data to forecast optimal fishing locations and promote sustainable fishing.</p>
+              </div>
+            </div>
+
+            <!-- Project Card 3 -->
+            <div class="project-card glass-panel hover-target" data-project="3">
+              <div class="project-preview">
+                <div class="project-overlay">
+                  <span class="btn-view font-mono">INSPECT CORE &lt;EXE&gt;</span>
+                </div>
+                <div class="project-icon-large"><i class="fa-solid fa-route"></i></div>
+              </div>
+              <div class="project-meta">
+                <span class="project-tag font-mono glow-text-cyan">REACT NATIVE / PYTHON</span>
+                <h3 class="project-name">Routivity: Road Trip Planner</h3>
+                <p class="project-desc">A smart mobile planner generating custom itineraries, expenses, and trending food suggestions based on user settings.</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- TIMELINE / EDUCATION & TIMELINE SECTION -->
+      <section id="experience" class="section">
+        <div class="section-container">
+          <div class="section-header">
+            <span class="section-num font-mono">04 //</span>
+            <h2 class="section-title">Timeline History</h2>
+          </div>
+          
+          <div class="timeline-container">
+            <div class="timeline-line"></div>
+            
+            <!-- Timeline Item 1 -->
+            <div class="timeline-item left glass-panel hover-target">
+              <div class="timeline-dot"></div>
+              <div class="timeline-date font-mono glow-text-cyan">AUG 2025 - PRESENT</div>
+              <h3 class="timeline-role">Routivity: Road Trip Planner</h3>
+              <h4 class="timeline-company font-mono">React Native, Python, Social APIs</h4>
+              <p class="timeline-desc">Developed a mobile itinerary generator detailing destinations, expense budgets, and group trip coordinates. Integrated social APIs for real-time recommendations.</p>
+            </div>
+
+            <!-- Timeline Item 2 -->
+            <div class="timeline-item right glass-panel hover-target">
+              <div class="timeline-dot"></div>
+              <div class="timeline-date font-mono glow-text-purple">AUG 2025 - OCT 2025</div>
+              <h3 class="timeline-role">Cropwise: AI Voice Assistant</h3>
+              <h4 class="timeline-company font-mono">React Native, FastAPI, OpenWeatherMap, Whisper</h4>
+              <p class="timeline-desc">Implemented a farmer speech system resolving weather trends and multilingual agriculture queries with natural text-to-speech feedback loops.</p>
+            </div>
+
+            <!-- Timeline Item 3 -->
+            <div class="timeline-item left glass-panel hover-target">
+              <div class="timeline-dot"></div>
+              <div class="timeline-date font-mono glow-text-cyan">AUG 2023 - MAY 2027 (EXPECTED)</div>
+              <h3 class="timeline-role">B.Tech. Information Technology</h3>
+              <h4 class="timeline-company font-mono">SSN College of Engineering, Chennai</h4>
+              <p class="timeline-desc">Acquiring strong foundations in Data Structures and Algorithms, Database Management, and Software Engineering. Current CGPA: 8.098 / 10.</p>
+            </div>
+
+            <!-- Timeline Item 4 -->
+            <div class="timeline-item right glass-panel hover-target">
+              <div class="timeline-dot"></div>
+              <div class="timeline-date font-mono glow-text-purple">FEB 2024 - APR 2024</div>
+              <h3 class="timeline-role">Aquanexus: Spots Forecaster</h3>
+              <h4 class="timeline-company font-mono">Python, React.js, GPS API, Marine Data</h4>
+              <p class="timeline-desc">Forecasted optimal marine zones by processing large GPS spatial arrays. Highlighted fish availability grids using predictive analysis tools.</p>
+            </div>
+
+            <!-- Timeline Item 5 -->
+            <div class="timeline-item left glass-panel hover-target">
+              <div class="timeline-dot"></div>
+              <div class="timeline-date font-mono glow-text-cyan">AUG 2021 - MAY 2023</div>
+              <h3 class="timeline-role">12th Grade Education</h3>
+              <h4 class="timeline-company font-mono">Spartan Matriculation Higher Secondary School</h4>
+              <p class="timeline-desc">Completed high school board certifications with a score of 574 / 600 in mathematics and science concentrations.</p>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- CONTACT SECTION -->
+      <section id="contact" class="section">
+        <div class="section-container">
+          <div class="section-header">
+            <span class="section-num font-mono">05 //</span>
+            <h2 class="section-title">Contact</h2>
+          </div>
+          
+          <div class="contact-grid">
+            <div class="contact-info glass-panel">
+              <h3 class="panel-title glow-text-cyan">&lt; TRANSMISSION &gt;</h3>
+              <p class="contact-text">
+                Have a project idea, a position to fill, or just want to discuss full-stack engineering and competitive programming? Drop me a line, and I will get back to you immediately.
+              </p>
+              
+              <div class="contact-details font-mono">
+                <div class="contact-detail-item">
+                  <i class="fa-solid fa-envelope glow-text-cyan"></i>
+                  <span>arvinjoelv0404@gmail.com</span>
+                </div>
+                <div class="contact-detail-item">
+                  <i class="fa-solid fa-phone glow-text-purple"></i>
+                  <span>+91 6381506054</span>
+                </div>
+                <div class="contact-detail-item">
+                  <i class="fa-solid fa-location-dot glow-text-cyan"></i>
+                  <span>Chennai, India</span>
+                </div>
+              </div>
+            </div>
+            
+            <div class="contact-form-wrapper glass-panel">
+              <form id="contact-form" class="contact-form">
+                <div class="form-group">
+                  <label for="name" class="font-mono">Sender Name:</label>
+                  <input type="text" id="name" name="name" required placeholder="John Doe" class="hover-target">
+                </div>
+                <div class="form-group">
+                  <label for="email" class="font-mono">Sender Mail:</label>
+                  <input type="email" id="email" name="email" required placeholder="john@example.com" class="hover-target">
+                </div>
+                <div class="form-group">
+                  <label for="message" class="font-mono">Message Payload:</label>
+                  <textarea id="message" name="message" required rows="5" placeholder="System details, ideas, timeline..." class="hover-target"></textarea>
+                </div>
+                <button type="submit" class="btn btn-primary hover-target" id="btn-submit">
+                  <span>Send Signal</span>
+                  <i class="fa-solid fa-paper-plane"></i>
+                </button>
+              </form>
+              <div id="form-feedback" class="form-feedback font-mono"></div>
+            </div>
+          </div>
+        </div>
+      </main>
+
+      <!-- Project Modal Detail View (Glassmorphism Overlay) -->
+      <div id="project-modal" class="project-modal">
+        <div class="modal-bg hover-target" id="modal-close-bg"></div>
+        <div class="modal-content glass-panel">
+          <button class="modal-close hover-target" id="modal-close-btn"><i class="fa-solid fa-xmark"></i></button>
+          <div class="modal-body">
+            <div class="modal-image-container">
+              <div class="modal-3d-placeholder">
+                <i class="fa-solid fa-cubes-stacked project-loading-icon"></i>
+                <div class="font-mono modal-canvas-label">CONNECTING CORE GEOMETRY...</div>
+              </div>
+            </div>
+            <div class="modal-info">
+              <span class="modal-tag font-mono glow-text-cyan" id="modal-tag">WEBGL</span>
+              <h3 class="modal-title" id="modal-title">Project Title</h3>
+              <p class="modal-description" id="modal-desc">Detailed project description goes here.</p>
+              
+              <h4 class="modal-subtitle font-mono">SYSTEM SPECIFICATIONS</h4>
+              <ul class="modal-specs font-mono" id="modal-specs">
+                <li>STACK: Three.js / CSS Variables / GSAP</li>
+                <li>FPS: 60 (STABLE)</li>
+                <li>MODULES: Responsive Parallax, WebGL Particle Node Graph</li>
+              </ul>
+              
+              <div class="modal-actions">
+                <a href="#" target="_blank" class="btn btn-primary hover-target" id="modal-link">
+                  <span>VIEW ON GITHUB</span>
+                  <i class="fa-brands fa-github"></i>
+                </a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+    <!-- Main JavaScript Modules -->
+    <script type="module" src="/src/main.js"></script>
+  </body>
+</html>
